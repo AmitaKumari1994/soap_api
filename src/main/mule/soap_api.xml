@@ -28,7 +28,8 @@ ns ns0 http://www.oorsprong.org/websamples.countryinfo
 output application/json
 ---
 {
-	"output":payload.body.FullCountryInfoResponse.FullCountryInfoResult
+	"output":payload.body.FullCountryInfoResponse.FullCountryInfoResult,
+	"status":"successful"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
