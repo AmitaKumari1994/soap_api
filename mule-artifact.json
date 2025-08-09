@@ -1,6 +1,5 @@
 {
-  "minMuleVersion": "4.8.0",
-  "javaSpecificationVersions": [
-    "17"
-  ]
+    "minMuleVersion": "4.8.0",
+    "javaSpecificationVersions": ["17"],
+    "sharedLibraries": ["javax.activation-1.2.0.jar"]
 }

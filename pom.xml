@@ -20,6 +20,24 @@
 	<build>
 		<plugins>
 			<plugin>
+					<groupId>com.mycompany</groupId>
+					<artifactId>soap_api</artifactId>
+					<version>${mule.maven.plugin.version}</version>
+					<extensions>true</extensions>
+					<configuration>
+						<cloudHubDeployment>
+							<username>sfx</username>
+							<environment>Sandbox</environment>
+							<workers>1</workers>
+							<workerType>Micro</workerType>
+							<applicationName>soap_api</applicationName>
+							<password>Avaamo1234#</password>
+							<muleVersion>${app.runtime}</muleVersion>
+						
+						</cloudHubDeployment>
+					</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<version>3.2.0</version>
@@ -41,11 +59,23 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
+    <groupId>com.sun.activation</groupId>
+    <artifactId>javax.activation</artifactId>
+    <version>1.2.0</version>
+    <scope>compile</scope>
+</dependency>
+		
+		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-sockets-connector</artifactId>
 			<version>1.2.5</version>
 			<classifier>mule-plugin</classifier>
 		</dependency>
+		<dependency>
+    <groupId>com.sun.activation</groupId>
+    <artifactId>javax.activation</artifactId>
+    <version>1.2.0</version>
+</dependency>
 		<dependency>
 			<groupId>org.mule.connectors</groupId>
 			<artifactId>mule-wsc-connector</artifactId>
