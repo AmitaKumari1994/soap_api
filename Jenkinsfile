@@ -13,12 +13,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: "${BRANCH}", url: "${GIT_REPO_URL}"
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean compile'
