@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Init') {
             steps {
-                echo '🏗️ Jenkinsfile started executing...'
+                echo 'Jenkinsfile started executing...'
                 bat 'echo Current directory && cd && dir'
             }
         }
@@ -45,3 +45,13 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo 'Build, test, and deployment completed successfully!'
+        }
+        failure {
+            echo 'One or more stages failed.'
+        }
+    }
+}
